@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:flutter/services.dart'; // For Clipboard functionality
+import 'package:flutter/services.dart';
 import '../models/favorites_model.dart';
 
 class Favorites extends StatelessWidget {
   const Favorites({super.key});
 
-  // Function to copy the caption to clipboard
   void copyToClipboard(BuildContext context, String caption) {
     Clipboard.setData(ClipboardData(text: caption));
   }
@@ -16,9 +15,8 @@ class Favorites extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Center(child: Text('Favorite Captions')),
-        backgroundColor:
-            const Color.fromARGB(255, 53, 164, 184), // Custom color for AppBar
-            automaticallyImplyLeading: false,
+        backgroundColor: const Color.fromARGB(255, 53, 164, 184),
+        automaticallyImplyLeading: false,
       ),
       body: Consumer<FavoritesModel>(
         builder: (context, favoritesModel, child) {
@@ -40,7 +38,7 @@ class Favorites extends StatelessWidget {
                   borderRadius: BorderRadius.circular(15),
                 ),
                 elevation: 6,
-                color: Colors.teal, // Custom color for Card
+                color: Colors.teal,
                 child: Padding(
                   padding: const EdgeInsets.all(12.0),
                   child: Column(
