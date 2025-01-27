@@ -1,4 +1,5 @@
 import 'package:caption/screens/Drawer.dart';
+import 'package:caption/screens/SettingsPage.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -21,8 +22,19 @@ class HomeScreen extends StatelessWidget {
         title: const Center(child: Text("Enjoy the Status")),
         backgroundColor: Colors.teal,
         foregroundColor: Colors.white,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.settings),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const SettingsPage()),
+              );
+            },
+          ),
+        ],
       ),
-      drawer: DrawerScreen(),
+      drawer: const DrawerScreen(),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(16.0),

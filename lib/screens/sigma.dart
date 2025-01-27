@@ -38,7 +38,7 @@ class sigma extends StatelessWidget {
         title: const Center(child: Text('Sigma Captions')),
         backgroundColor:
             const Color.fromARGB(255, 27, 128, 228), // Custom AppBar color
-            automaticallyImplyLeading: false,
+        automaticallyImplyLeading: false,
       ),
       body: Consumer<FavoritesModel>(
         builder: (context, favoritesModel, child) {
