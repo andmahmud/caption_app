@@ -9,7 +9,7 @@ import 'package:caption/screens/Travel.dart';
 import 'package:caption/screens/funny.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'screens/home_screen.dart';
+import 'screens/home.dart';
 import 'screens/sigma.dart';
 import 'screens/Favorites.dart';
 import 'screens/Sad.dart';

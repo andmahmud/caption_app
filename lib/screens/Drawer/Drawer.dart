@@ -1,3 +1,6 @@
+import 'package:caption/screens/Favorites.dart';
+import 'package:caption/screens/Settings/SettingsPage.dart';
+import 'package:caption/screens/home.dart' show HomeScreen;
 import 'package:flutter/material.dart';
 
 class DrawerScreen extends StatelessWidget {
@@ -47,21 +50,30 @@ class DrawerScreen extends StatelessWidget {
             leading: const Icon(Icons.home),
             title: const Text('Home'),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const HomeScreen()),
+              );
             },
           ),
           ListTile(
             leading: const Icon(Icons.favorite),
             title: const Text('Favorites'),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Favorites()),
+              );
             },
           ),
           ListTile(
             leading: const Icon(Icons.settings),
             title: const Text('Settings'),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const SettingsPage()),
+              );
             },
           ),
           ListTile(
