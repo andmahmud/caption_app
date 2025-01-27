@@ -1,12 +1,68 @@
 import 'package:flutter/material.dart';
 
-class SettingsPage extends StatelessWidget {
+class SettingsPage extends StatefulWidget {
   const SettingsPage({super.key});
+
+  @override
+  _SettingsPageState createState() => _SettingsPageState();
+}
+
+class _SettingsPageState extends State<SettingsPage> {
+  final TextEditingController _searchController = TextEditingController();
+  final List<String> _settingsOptions = [
+    "Account",
+    "Notifications",
+    "Privacy",
+    "Help",
+    "Font Size",
+    "Language", // New setting item added
+  ];
+  List<String> _filteredOptions = [];
+
+  final double _fontSize = 20.0; // Default font size
+
+  final Map<String, IconData> _icons = {
+    "Account": Icons.account_circle,
+    "Notifications": Icons.notifications,
+    "Privacy": Icons.lock,
+    "Help": Icons.help,
+    "Font Size": Icons.text_decrease,
+    "Language": Icons.language, // Icon for the new setting item
+  };
+
+  @override
+  void initState() {
+    super.initState();
+    _filteredOptions = _settingsOptions;
+    _searchController.addListener(_filterOptions);
+  }
+
+  void _filterOptions() {
+    final query = _searchController.text.toLowerCase();
+    setState(() {
+      _filteredOptions = _settingsOptions
+          .where((option) => option.toLowerCase().contains(query))
+          .toList();
+    });
+  }
+
+  @override
+  void dispose() {
+    _searchController.removeListener(_filterOptions);
+    _searchController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
         title: const Text("Settings"),
         backgroundColor: Colors.teal,
         foregroundColor: Colors.white,
@@ -14,32 +70,36 @@ class SettingsPage extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
-              "Settings",
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            // Search Bar
+            TextField(
+              controller: _searchController,
+              decoration: InputDecoration(
+                hintText: "Search settings...",
+                suffixIcon: const Icon(Icons.search),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(15.0),
+                ),
+              ),
             ),
-            const SizedBox(height: 20),
-            ListTile(
-              title: const Text("Account"),
-              leading: const Icon(Icons.account_circle),
-              onTap: () {},
-            ),
-            ListTile(
-              title: const Text("Notifications"),
-              leading: const Icon(Icons.notifications),
-              onTap: () {},
-            ),
-            ListTile(
-              title: const Text("Privacy"),
-              leading: const Icon(Icons.lock),
-              onTap: () {},
-            ),
-            ListTile(
-              title: const Text("Help"),
-              leading: const Icon(Icons.help),
-              onTap: () {},
+            const SizedBox(height: 16.0),
+            // Settings Options
+            Expanded(
+              child: ListView.builder(
+                itemCount: _filteredOptions.length,
+                itemBuilder: (context, index) {
+                  final option = _filteredOptions[index];
+                  return ListTile(
+                    title: Text(
+                      option,
+                      style: TextStyle(
+                          fontSize: option == "Font Size" ? _fontSize : 20.0),
+                    ),
+                    leading: Icon(_icons[option]),
+                    onTap: () {},
+                  );
+                },
+              ),
             ),
           ],
         ),

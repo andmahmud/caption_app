@@ -1,5 +1,6 @@
 import 'package:caption/screens/Favorites.dart';
 import 'package:caption/screens/Settings/SettingsPage.dart';
+import 'package:caption/screens/dev.dart' show DeveloperScreen;
 import 'package:caption/screens/home.dart' show HomeScreen;
 import 'package:flutter/material.dart';
 
@@ -77,8 +78,29 @@ class DrawerScreen extends StatelessWidget {
             },
           ),
           ListTile(
+            leading: const Icon(Icons.person),
+            title: const Text('Developer Info'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const DeveloperScreen()),
+              );
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.star),
+            title: const Text('App Rating'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const SettingsPage()),
+              );
+            },
+          ),
+          ListTile(
             leading: const Icon(Icons.exit_to_app),
-            title: const Text('Logout'),
+            title: const Text('Exit App'),
             onTap: () {
               Navigator.pop(context);
             },
