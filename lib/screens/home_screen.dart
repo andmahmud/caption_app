@@ -17,9 +17,9 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(100), // Height of the AppBar
+        preferredSize: const Size.fromHeight(100),
         child: ClipPath(
-          clipper: BottomRoundedClipper(), // Custom clipper for rounded corners
+          clipper: BottomRoundedClipper(),
           child: AppBar(
             leading: Builder(
               builder: (context) {
