@@ -89,15 +89,15 @@ class _HomeScreenState extends State<HomeScreen> {
                   buildCard(
                     context,
                     image: 'assets/images/sigma.png',
-                    label: "Sigma Captions",
+                    label: "Sigma ",
                     routeName: '/captions',
                   ),
-                  // buildCard(
-                  //   context,
-                  //   image: 'assets/images/favorites.png',
-                  //   label: "Favorites",
-                  //   routeName: '/favorites',
-                  // ),
+                  buildCard(
+                    context,
+                    image: 'assets/images/favorites.png',
+                    label: "Favorites",
+                    routeName: '/favorites',
+                  ),
                 ],
               ),
               const SizedBox(height: 10),
@@ -107,13 +107,13 @@ class _HomeScreenState extends State<HomeScreen> {
                   buildCard(
                     context,
                     image: 'assets/images/sad.png',
-                    label: "Sad Captions",
+                    label: "Sad ",
                     routeName: '/sad_captions',
                   ),
                   buildCard(
                     context,
                     image: 'assets/images/funny.png',
-                    label: "Funny Captions",
+                    label: "Funny ",
                     routeName: '/funny_captions',
                   ),
                 ],
@@ -131,7 +131,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   buildCard(
                     context,
                     image: 'assets/images/life.png',
-                    label: "Life Captions",
+                    label: "Life ",
                     routeName: '/life_captions',
                   ),
                 ],
@@ -143,13 +143,13 @@ class _HomeScreenState extends State<HomeScreen> {
                   buildCard(
                     context,
                     image: 'assets/images/Romantic.png',
-                    label: "Romantic Captions",
+                    label: "Romantic ",
                     routeName: '/romantic_captions',
                   ),
                   buildCard(
                     context,
                     image: 'assets/images/Friendship.png',
-                    label: "Friendship Captions",
+                    label: "Friendship ",
                     routeName: '/friendship_captions',
                   ),
                 ],
@@ -161,13 +161,45 @@ class _HomeScreenState extends State<HomeScreen> {
                   buildCard(
                     context,
                     image: 'assets/images/Birthday.png',
-                    label: "Birthday Captions",
+                    label: "Birthday ",
                     routeName: '/birthday_captions',
                   ),
                   buildCard(
                     context,
                     image: 'assets/images/Breakup.png',
-                    label: "Breakup Captions",
+                    label: "Breakup ",
+                    routeName: '/love_failure_captions',
+                  ),
+                  // new caption
+                  buildCard(
+                    context,
+                    image: 'assets/images/Travel.png',
+                    label: "Travel",
+                    routeName: '/Travel',
+                    //
+                  ),
+                  buildCard(
+                    context,
+                    image: 'assets/images/Breakup.png',
+                    label: "Breakup ",
+                    routeName: '/love_failure_captions',
+                  ),
+                  buildCard(
+                    context,
+                    image: 'assets/images/Breakup.png',
+                    label: "Breakup ",
+                    routeName: '/love_failure_captions',
+                  ),
+                  buildCard(
+                    context,
+                    image: 'assets/images/Breakup.png',
+                    label: "Breakup ",
+                    routeName: '/love_failure_captions',
+                  ),
+                  buildCard(
+                    context,
+                    image: 'assets/images/Breakup.png',
+                    label: "Breakup ",
                     routeName: '/love_failure_captions',
                   ),
                 ],

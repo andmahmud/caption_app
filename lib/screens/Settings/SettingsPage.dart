@@ -41,11 +41,6 @@ class SettingsPage extends StatelessWidget {
               leading: const Icon(Icons.help),
               onTap: () {},
             ),
-            const Spacer(),
-            ElevatedButton(
-              onPressed: () {},
-              child: const Text("Logout"),
-            ),
           ],
         ),
       ),
