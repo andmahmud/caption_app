@@ -1,3 +1,4 @@
+import 'package:caption/screens/language.dart';
 import 'package:flutter/material.dart';
 
 class SettingsPage extends StatefulWidget {
@@ -15,11 +16,11 @@ class _SettingsPageState extends State<SettingsPage> {
     "Privacy",
     "Help",
     "Font Size",
-    "Language", // New setting item added
+    "Language",
   ];
   List<String> _filteredOptions = [];
 
-  final double _fontSize = 20.0; // Default font size
+  final double _fontSize = 20.0;
 
   final Map<String, IconData> _icons = {
     "Account": Icons.account_circle,
@@ -27,7 +28,7 @@ class _SettingsPageState extends State<SettingsPage> {
     "Privacy": Icons.lock,
     "Help": Icons.help,
     "Font Size": Icons.text_decrease,
-    "Language": Icons.language, // Icon for the new setting item
+    "Language": Icons.language,
   };
 
   @override
@@ -44,6 +45,13 @@ class _SettingsPageState extends State<SettingsPage> {
           .where((option) => option.toLowerCase().contains(query))
           .toList();
     });
+  }
+
+  void _navigateToLanguageSelection() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const LanguageSelectionPage()),
+    );
   }
 
   @override
@@ -71,7 +79,6 @@ class _SettingsPageState extends State<SettingsPage> {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            // Search Bar
             TextField(
               controller: _searchController,
               decoration: InputDecoration(
@@ -83,7 +90,6 @@ class _SettingsPageState extends State<SettingsPage> {
               ),
             ),
             const SizedBox(height: 16.0),
-            // Settings Options
             Expanded(
               child: ListView.builder(
                 itemCount: _filteredOptions.length,
@@ -96,7 +102,11 @@ class _SettingsPageState extends State<SettingsPage> {
                           fontSize: option == "Font Size" ? _fontSize : 20.0),
                     ),
                     leading: Icon(_icons[option]),
-                    onTap: () {},
+                    onTap: () {
+                      if (option == "Language") {
+                        _navigateToLanguageSelection();
+                      } else {}
+                    },
                   );
                 },
               ),
