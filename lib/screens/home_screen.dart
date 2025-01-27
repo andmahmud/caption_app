@@ -171,6 +171,12 @@ class _HomeScreenState extends State<HomeScreen> {
                     routeName: '/love_failure_captions',
                   ),
                   // new caption
+                ],
+              ),
+              const SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
                   buildCard(
                     context,
                     image: 'assets/images/Travel.png',
@@ -180,28 +186,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   buildCard(
                     context,
-                    image: 'assets/images/Breakup.png',
-                    label: "Breakup ",
-                    routeName: '/love_failure_captions',
+                    image: 'assets/images/Success.png',
+                    label: "Success ",
+                    routeName: '/Success',
                   ),
-                  buildCard(
-                    context,
-                    image: 'assets/images/Breakup.png',
-                    label: "Breakup ",
-                    routeName: '/love_failure_captions',
-                  ),
-                  buildCard(
-                    context,
-                    image: 'assets/images/Breakup.png',
-                    label: "Breakup ",
-                    routeName: '/love_failure_captions',
-                  ),
-                  buildCard(
-                    context,
-                    image: 'assets/images/Breakup.png',
-                    label: "Breakup ",
-                    routeName: '/love_failure_captions',
-                  ),
+                  // new caption
                 ],
               ),
             ],

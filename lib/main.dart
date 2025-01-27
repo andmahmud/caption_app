@@ -4,6 +4,7 @@ import 'package:caption/screens/Friendship.dart';
 import 'package:caption/screens/Life.dart';
 import 'package:caption/screens/Love_Failureantic.dart';
 import 'package:caption/screens/Romantic.dart';
+import 'package:caption/screens/Success.dart';
 import 'package:caption/screens/Travel.dart';
 import 'package:caption/screens/funny.dart';
 import 'package:flutter/material.dart';
@@ -49,6 +50,7 @@ class CaptionApp extends StatelessWidget {
         '/birthday_captions': (context) => Birthday(),
         '/love_failure_captions': (context) => Love_Failureantic(),
         '/Travel': (context) => Travel(),
+        '/Success': (context) => Success(),
       },
     );
   }
