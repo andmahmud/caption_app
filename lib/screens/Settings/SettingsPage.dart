@@ -24,36 +24,26 @@ class SettingsPage extends StatelessWidget {
             ListTile(
               title: const Text("Account"),
               leading: const Icon(Icons.account_circle),
-              onTap: () {
-                // Handle account settings
-              },
+              onTap: () {},
             ),
             ListTile(
               title: const Text("Notifications"),
               leading: const Icon(Icons.notifications),
-              onTap: () {
-                // Handle notification settings
-              },
+              onTap: () {},
             ),
             ListTile(
               title: const Text("Privacy"),
               leading: const Icon(Icons.lock),
-              onTap: () {
-                // Handle privacy settings
-              },
+              onTap: () {},
             ),
             ListTile(
               title: const Text("Help"),
               leading: const Icon(Icons.help),
-              onTap: () {
-                // Handle help section
-              },
+              onTap: () {},
             ),
             const Spacer(),
             ElevatedButton(
-              onPressed: () {
-                // Handle logout or other action
-              },
+              onPressed: () {},
               child: const Text("Logout"),
             ),
           ],

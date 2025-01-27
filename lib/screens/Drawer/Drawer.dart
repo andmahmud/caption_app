@@ -28,7 +28,6 @@ class DrawerScreen extends StatelessWidget {
             title: const Text('Home'),
             onTap: () {
               Navigator.pop(context);
-              // Handle navigation or actions here
             },
           ),
           ListTile(
@@ -36,7 +35,6 @@ class DrawerScreen extends StatelessWidget {
             title: const Text('Favorites'),
             onTap: () {
               Navigator.pop(context);
-              // Handle navigation or actions here
             },
           ),
           ListTile(
@@ -44,7 +42,6 @@ class DrawerScreen extends StatelessWidget {
             title: const Text('Settings'),
             onTap: () {
               Navigator.pop(context);
-              // Handle navigation or actions here
             },
           ),
           ListTile(
@@ -52,7 +49,6 @@ class DrawerScreen extends StatelessWidget {
             title: const Text('Logout'),
             onTap: () {
               Navigator.pop(context);
-              // Handle logout here
             },
           ),
         ],

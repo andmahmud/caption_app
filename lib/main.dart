@@ -36,9 +36,9 @@ class CaptionApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) => HomeScreen(),
+        '/': (context) => const HomeScreen(),
         '/captions': (context) => sigma(),
-        '/favorites': (context) => Favorites(),
+        '/favorites': (context) => const Favorites(),
         '/sad_captions': (context) => Sad(),
         '/funny_captions': (context) => Funny(),
         '/motivational_captions': (context) => Motivation(),
