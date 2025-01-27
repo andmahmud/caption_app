@@ -1,5 +1,5 @@
-import 'package:caption/screens/Drawer.dart';
-import 'package:caption/screens/SettingsPage.dart';
+import 'package:caption/screens/Drawer/Drawer.dart';
+import 'package:caption/screens/Settings/SettingsPage.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
