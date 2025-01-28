@@ -9,7 +9,7 @@ class DeveloperScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.teal,
         title: const Text(
-          "About the Developer",
+          "Developer Info ",
           style: TextStyle(color: Colors.white),
         ),
         leading: IconButton(
@@ -133,7 +133,7 @@ class DeveloperScreen extends StatelessWidget {
               const Divider(color: Colors.teal),
               const SizedBox(height: 20),
               const Text(
-                "Assalamu Alaikum. I am a proud Bangladeshi Citizen. As an Mobile App Developer, I strive to make meaningful contributions in technology. Wishing everyone success and blessings.",
+                "I am a skilled software developer with expertise in Dart, Flutter, Python, and Django. I specialize in building cross-platform mobile apps and scalable web solutions. With experience in state management, responsive UI design, and backend integration, I am passionate about delivering high-quality, user-friendly applications that solve real-world problems.",
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 16),
               )
