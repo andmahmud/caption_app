@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
-import '../models/favorites_model.dart';
+import '../../models/favorites_model.dart';
 
 class Love_Failureantic extends StatelessWidget {
   final List<String> loveFailureCaptions = [
@@ -66,7 +66,6 @@ class Love_Failureantic extends StatelessWidget {
 
   void copyToClipboard(BuildContext context, String text) {
     Clipboard.setData(ClipboardData(text: text));
-  
   }
 
   @override
@@ -100,7 +99,8 @@ class Love_Failureantic extends StatelessWidget {
                     children: [
                       Text(
                         caption,
-                        style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+                        style: const TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.w500),
                       ),
                       const SizedBox(height: 10),
                       Row(
@@ -113,7 +113,7 @@ class Love_Failureantic extends StatelessWidget {
                               copyToClipboard(context, caption);
                             },
                           ),
-                            // share Button
+                          // share Button
                           IconButton(
                             icon: const Icon(Icons.share, color: Colors.black),
                             onPressed: () {
@@ -123,7 +123,9 @@ class Love_Failureantic extends StatelessWidget {
                           // Favorite Icon
                           IconButton(
                             icon: Icon(
-                              isFavorite ? Icons.favorite : Icons.favorite_border,
+                              isFavorite
+                                  ? Icons.favorite
+                                  : Icons.favorite_border,
                               color: isFavorite ? Colors.red : Colors.black,
                             ),
                             onPressed: () {

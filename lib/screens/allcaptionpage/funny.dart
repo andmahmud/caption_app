@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
-import '../models/favorites_model.dart';
+import '../../models/favorites_model.dart';
 
-class Motivation extends StatelessWidget {
-  final List<String> motivationCaptions = [
-    "The harder you work for something, the greater you'll feel when you achieve it. আপনি যা কিছু জন্য কঠোর পরিশ্রম করেন, তা অর্জন করার পর আপনি যেটি অনুভব করবেন তা আরও মহান হবে।",
-    "Dream it. Wish it. Do it. এটি স্বপ্ন দেখুন। এটি কামনা করুন। এটি করুন।",
-    "Success doesn’t just find you. You have to go out and get it. সফলতা কেবল আপনাকে খুঁজে পায় না। আপনাকে বাইরে গিয়ে এটি পেতে হবে।",
-    "The key to success is to focus on goals, not obstacles. সফলতার মূল চাবি হল লক্ষ্যগুলিতে মনোযোগ দেওয়া, প্রতিবন্ধকতাগুলিতে নয়।",
-    "It always seems impossible until it’s done. এটি সবসময় অসম্ভাব্য মনে হয় যতক্ষণ না এটি সম্পন্ন হয়।",
-    "Don’t stop when you’re tired. Stop when you’re done. যখন আপনি ক্লান্ত হন তখন থামবেন না। যখন আপনি শেষ করবেন তখন থামুন।",
-    "Wake up with determination. Go to bed with satisfaction. দৃঢ় সংকল্পের সঙ্গে উঠে আসুন। সন্তুষ্টি নিয়ে শোয়া যান।",
-    "Believe you can and you're halfway there. বিশ্বাস করুন আপনি করতে পারেন এবং আপনি সেখানেই অর্ধেক পৌঁছেছেন।",
-    "The future belongs to those who believe in the beauty of their dreams. ভবিষ্যৎ তাদের যারা তাদের স্বপ্নের সৌন্দর্যে বিশ্বাস করে তাদের belongs।",
-    "Don't watch the clock; do what it does. Keep going. ঘড়ি দেখবেন না; এটি যা করে তা করুন। চলতে থাকুন।",
+class Funny extends StatelessWidget {
+  final List<String> funnyCaptions = [
+    "I'm not lazy, I'm just on energy-saving mode. আমি অলস না, আমি শুধু শক্তি সঞ্চয় মোডে আছি।",
+    "Life's too short to be serious all the time. জীবনের সব সময় সিরিয়াস হওয়ার জন্য খুব ছোট।",
+    "I'm on a seafood diet. I see food, and I eat it! আমি একটি সীফুড ডায়েটে আছি। আমি খাবার দেখি, এবং আমি এটি খাই!",
+    "I woke up like this... tired! আমি এমনই জেগে উঠি... ক্লান্ত!",
+    "Why fall in love when you can fall asleep? প্রেমে পড়ার পরিবর্তে কেন ঘুমাতে যাবে?",
+    "If we shouldn’t eat at night, why is there a light in the fridge? যদি রাতে না খাওয়া উচিত হয়, তবে ফ্রিজে আলো কেন আছে?",
+    "When nothing goes right, go left. যখন কিছুই ঠিকঠাক হয় না, তখন বামে যাও।",
+    "Reality called, so I hung up. বাস্তবতা কল করল, তাই আমি তা কেটে দিলাম।",
+    "Some people graduate with honors, I am just honored to graduate. কিছু মানুষ সম্মানের সাথে স্নাতক হয়, আমি শুধু স্নাতক করার জন্য সম্মানিত।",
+    "Don't worry if plan A fails, there are 25 more letters in the alphabet. যদি প্ল্যান এ ব্যর্থ হয়, তবে বর্ণমালায় আরও ২৫টি অক্ষর আছে।",
   ];
 
   void copyToClipboard(BuildContext context, String text) {
@@ -25,16 +25,17 @@ class Motivation extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Center(child: Text('Motivational Captions')),
-        backgroundColor: Colors.green, // Motivational and fresh color
+        title: const Center(child: Text('Funny Captions')),
+        backgroundColor: Colors.teal, // Fun and bright color
+        foregroundColor: Colors.white,
         automaticallyImplyLeading: false,
       ),
       body: Consumer<FavoritesModel>(
         builder: (context, favoritesModel, child) {
           return ListView.builder(
-            itemCount: motivationCaptions.length,
+            itemCount: funnyCaptions.length,
             itemBuilder: (context, index) {
-              String caption = motivationCaptions[index];
+              String caption = funnyCaptions[index];
               bool isFavorite = favoritesModel.favorites.contains(caption);
 
               return Card(
@@ -43,8 +44,7 @@ class Motivation extends StatelessWidget {
                   borderRadius: BorderRadius.circular(15),
                 ),
                 elevation: 6,
-                color:
-                    Colors.lightGreenAccent, // Fresh and inspiring card color
+                color: Colors.yellowAccent, // Cheerful card color
                 child: Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: Column(
@@ -65,7 +65,8 @@ class Motivation extends StatelessWidget {
                             onPressed: () {
                               copyToClipboard(context, caption);
                             },
-                          ), // share Button
+                          ),
+                          // share Button
                           IconButton(
                             icon: const Icon(Icons.share, color: Colors.black),
                             onPressed: () {

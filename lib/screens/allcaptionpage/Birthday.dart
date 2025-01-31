@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
-import '../models/favorites_model.dart';
+import '../../models/favorites_model.dart';
 
 class Birthday extends StatelessWidget {
   final List<String> birthdayCaptions = [
@@ -114,7 +114,6 @@ class Birthday extends StatelessWidget {
 
   void copyToClipboard(BuildContext context, String text) {
     Clipboard.setData(ClipboardData(text: text));
-   
   }
 
   @override
@@ -147,7 +146,8 @@ class Birthday extends StatelessWidget {
                     children: [
                       Text(
                         caption,
-                        style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+                        style: const TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.w500),
                       ),
                       const SizedBox(height: 10),
                       Row(
@@ -160,17 +160,17 @@ class Birthday extends StatelessWidget {
                               copyToClipboard(context, caption);
                             },
                           ),
-                           // Copy Button
+                          // Copy Button
                           IconButton(
                             icon: const Icon(Icons.share, color: Colors.black),
-                            onPressed: () {
-                             
-                            },
+                            onPressed: () {},
                           ),
                           // Favorite Icon
                           IconButton(
                             icon: Icon(
-                              isFavorite ? Icons.favorite : Icons.favorite_border,
+                              isFavorite
+                                  ? Icons.favorite
+                                  : Icons.favorite_border,
                               color: isFavorite ? Colors.red : Colors.black,
                             ),
                             onPressed: () {

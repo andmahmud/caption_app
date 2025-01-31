@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
-import '../models/favorites_model.dart';
+import '../../models/favorites_model.dart';
 
 class Sad extends StatelessWidget {
   final List<String> sadCaptions = [
@@ -29,7 +29,7 @@ class Sad extends StatelessWidget {
     "মাঝে মাঝে স্মৃতিগুলো চোখ দিয়ে গড়িয়ে পড়ে।",
     "কাঁদা মানে দুর্বল হওয়া নয়; বরং অনেক দিন ধরে শক্ত থাকার চিহ্ন।",
     "আমার নীরবতা আমার যন্ত্রণার আরেকটি শব্দ।",
-     "Tears speak the words that the heart can't say.",
+    "Tears speak the words that the heart can't say.",
     "It's hard to forget someone who gave you so much to remember.",
     "Pain changes people; it makes them trust less and think more.",
     "Sometimes, it's better to be alone than to be hurt again.",
@@ -125,7 +125,6 @@ class Sad extends StatelessWidget {
 
   void copyToClipboard(BuildContext context, String text) {
     Clipboard.setData(ClipboardData(text: text));
-   
   }
 
   @override
@@ -159,7 +158,8 @@ class Sad extends StatelessWidget {
                     children: [
                       Text(
                         caption,
-                        style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+                        style: const TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.w500),
                       ),
                       const SizedBox(height: 10),
                       Row(
@@ -182,7 +182,9 @@ class Sad extends StatelessWidget {
                           // Favorite Icon
                           IconButton(
                             icon: Icon(
-                              isFavorite ? Icons.favorite : Icons.favorite_border,
+                              isFavorite
+                                  ? Icons.favorite
+                                  : Icons.favorite_border,
                               color: isFavorite ? Colors.pink : Colors.black,
                             ),
                             onPressed: () {

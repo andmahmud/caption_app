@@ -1,18 +1,18 @@
-import 'package:caption/screens/Motivation.dart';
-import 'package:caption/screens/Birthday.dart';
-import 'package:caption/screens/Friendship.dart';
-import 'package:caption/screens/Life.dart';
-import 'package:caption/screens/Love_Failureantic.dart';
-import 'package:caption/screens/Romantic.dart';
-import 'package:caption/screens/Success.dart';
-import 'package:caption/screens/Travel.dart';
-import 'package:caption/screens/funny.dart';
+import 'package:caption/screens/allcaptionpage/Motivation.dart';
+import 'package:caption/screens/allcaptionpage/Birthday.dart';
+import 'package:caption/screens/allcaptionpage/Friendship.dart';
+import 'package:caption/screens/allcaptionpage/Life.dart';
+import 'package:caption/screens/allcaptionpage/Love_Failureantic.dart';
+import 'package:caption/screens/allcaptionpage/Romantic.dart';
+import 'package:caption/screens/allcaptionpage/Success.dart';
+import 'package:caption/screens/allcaptionpage/Travel.dart';
+import 'package:caption/screens/allcaptionpage/funny.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'screens/home.dart';
-import 'screens/sigma.dart';
-import 'screens/Favorites.dart';
-import 'screens/Sad.dart';
+import 'screens/allcaptionpage/sigma.dart';
+import 'screens/allcaptionpage/Favorites.dart';
+import 'screens/allcaptionpage/Sad.dart';
 import 'models/favorites_model.dart';
 
 void main() {

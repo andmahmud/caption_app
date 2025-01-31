@@ -1,4 +1,4 @@
-import 'package:caption/screens/Favorites.dart';
+import 'package:caption/screens/allcaptionpage/Favorites.dart';
 import 'package:caption/screens/Settings/SettingsPage.dart';
 import 'package:caption/screens/dev.dart' show DeveloperScreen;
 import 'package:caption/screens/home.dart' show HomeScreen;

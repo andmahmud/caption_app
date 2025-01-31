@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
-import '../models/favorites_model.dart';
+import '../../models/favorites_model.dart';
 
-class Romantic extends StatelessWidget {
-  final List<String> romanticCaptions = [
-    "You are my today and all of my tomorrows. তুমি আমার আজ এবং আমার সব আগামীকাল।",
-    "In your smile, I see something more beautiful than the stars. তোমার হাসিতে আমি তারা থেকে অনেক সুন্দর কিছু দেখি।",
-    "I need you like a heart needs a beat. আমাকে তোমার প্রয়োজন ঠিক যেমন একটি হৃদয়কে একটি স্পন্দন প্রয়োজন।",
-    "Love is not about how many days, months, or years you have been together. Love is about how much you love each other every single day. ভালোবাসা হল কতদিন, মাস বা বছর একসাথে ছিলে তার বিষয়ে নয়। ভালোবাসা হল প্রতি একদিনে আপনি একে অপরকে কতটা ভালোবাসেন।",
-    "I am yours, don't give myself back to me. আমি তোমার, আমাকে নিজের কাছে ফিরিয়ে নিও না।",
-    "Every love story is beautiful, but ours is my favorite. প্রতিটি প্রেমের গল্পই সুন্দর, কিন্তু আমাদের গল্পটি আমার প্রিয়।",
-    "You are the peanut butter to my jelly. তুমি আমার জেলির জন্য পিনাট বাটার।",
-    "I fell in love with you because of all the little things you do. আমি তোমার প্রতি প্রেমে পড়েছি কারণ তুমি যে ছোট ছোট কাজগুলি করো তার জন্য।",
-    "When I saw you, I fell in love, and you smiled because you knew. যখন আমি তোমাকে দেখলাম, আমি প্রেমে পড়লাম, এবং তুমি হাসলে কারণ তুমি জানো।",
-    "I want to be your favorite hello and your hardest goodbye. আমি তোমার প্রিয় হ্যালো এবং সবচেয়ে কঠিন বিদায় হতে চাই।",
+class Motivation extends StatelessWidget {
+  final List<String> motivationCaptions = [
+    "The harder you work for something, the greater you'll feel when you achieve it. আপনি যা কিছু জন্য কঠোর পরিশ্রম করেন, তা অর্জন করার পর আপনি যেটি অনুভব করবেন তা আরও মহান হবে।",
+    "Dream it. Wish it. Do it. এটি স্বপ্ন দেখুন। এটি কামনা করুন। এটি করুন।",
+    "Success doesn’t just find you. You have to go out and get it. সফলতা কেবল আপনাকে খুঁজে পায় না। আপনাকে বাইরে গিয়ে এটি পেতে হবে।",
+    "The key to success is to focus on goals, not obstacles. সফলতার মূল চাবি হল লক্ষ্যগুলিতে মনোযোগ দেওয়া, প্রতিবন্ধকতাগুলিতে নয়।",
+    "It always seems impossible until it’s done. এটি সবসময় অসম্ভাব্য মনে হয় যতক্ষণ না এটি সম্পন্ন হয়।",
+    "Don’t stop when you’re tired. Stop when you’re done. যখন আপনি ক্লান্ত হন তখন থামবেন না। যখন আপনি শেষ করবেন তখন থামুন।",
+    "Wake up with determination. Go to bed with satisfaction. দৃঢ় সংকল্পের সঙ্গে উঠে আসুন। সন্তুষ্টি নিয়ে শোয়া যান।",
+    "Believe you can and you're halfway there. বিশ্বাস করুন আপনি করতে পারেন এবং আপনি সেখানেই অর্ধেক পৌঁছেছেন।",
+    "The future belongs to those who believe in the beauty of their dreams. ভবিষ্যৎ তাদের যারা তাদের স্বপ্নের সৌন্দর্যে বিশ্বাস করে তাদের belongs।",
+    "Don't watch the clock; do what it does. Keep going. ঘড়ি দেখবেন না; এটি যা করে তা করুন। চলতে থাকুন।",
   ];
 
   void copyToClipboard(BuildContext context, String text) {
@@ -25,17 +25,16 @@ class Romantic extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Center(child: Text('Romantic Captions')),
-        backgroundColor: Colors.pink, // Romantic and warm color
-        foregroundColor: Colors.white,
+        title: const Center(child: Text('Motivational Captions')),
+        backgroundColor: Colors.green, // Motivational and fresh color
         automaticallyImplyLeading: false,
       ),
       body: Consumer<FavoritesModel>(
         builder: (context, favoritesModel, child) {
           return ListView.builder(
-            itemCount: romanticCaptions.length,
+            itemCount: motivationCaptions.length,
             itemBuilder: (context, index) {
-              String caption = romanticCaptions[index];
+              String caption = motivationCaptions[index];
               bool isFavorite = favoritesModel.favorites.contains(caption);
 
               return Card(
@@ -44,7 +43,8 @@ class Romantic extends StatelessWidget {
                   borderRadius: BorderRadius.circular(15),
                 ),
                 elevation: 6,
-                color: Colors.pinkAccent, // Romantic and soft card color
+                color:
+                    Colors.lightGreenAccent, // Fresh and inspiring card color
                 child: Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: Column(

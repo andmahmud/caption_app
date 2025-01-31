@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
-import '../models/favorites_model.dart';
+import '../../models/favorites_model.dart';
 
-class Success extends StatelessWidget {
+class Travel extends StatelessWidget {
   final List<String> friendshipCaptions = [
     "A true friend is somebody who can make us feel better no matter how bad things may be. একজন প্রকৃত বন্ধু হলো কেউ যে আমাদের যেকোনো পরিস্থিতিতেও ভালো অনুভব করাতে পারে।",
     "Friendship is born at that moment when one person says to another, 'What! You too? I thought I was the only one.' বন্ধুত্ব তখনই জন্ম নেয় যখন একজন ব্যক্তি অন্যকে বলে, 'কি! তুমি ও? আমি ভাবছিলাম আমি একাই ছিলাম।'",
@@ -17,6 +17,8 @@ class Success extends StatelessWidget {
     "There are no strangers here; Only friends you haven’t yet met. এখানে কোনো অপরিচিত ব্যক্তি নেই; কেবলমাত্র বন্ধুরা যারা তুমি এখনও দেখনি।",
   ];
 
+  Travel({super.key});
+
   void copyToClipboard(BuildContext context, String text) {
     Clipboard.setData(ClipboardData(text: text));
   }
@@ -25,7 +27,7 @@ class Success extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Center(child: Text('Success Captions')),
+        title: const Center(child: Text('Travel Captions')),
         backgroundColor:
             Colors.orange, // Warm and inviting color for friendship
         automaticallyImplyLeading: false,
